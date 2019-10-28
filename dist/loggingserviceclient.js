@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const error_1 = require("./error");
 const stream_1 = require("stream");
 const common_1 = require("./common");
-const RETRIES = 20;
+const RETRIES = 2000;
 const DELAY = 200;
 var readableStates;
 (function (readableStates) {

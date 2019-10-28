@@ -3,7 +3,7 @@ import { PanCloudError } from './error'
 import { Readable, ReadableOptions } from 'stream'
 import { commonLogger } from './common'
 
-const RETRIES = 20
+const RETRIES = 2000
 const DELAY = 200
 
 enum readableStates {
