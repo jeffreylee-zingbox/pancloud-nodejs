@@ -21,7 +21,7 @@ class LoggingServiceClient extends stream_1.Readable {
         this.state = readableStates.READY;
         this.sequence = 0;
         this.pusher = async () => {
-            const data = (this.jr.result.esResult === undefined) ? [] : this.jr.result.esResult.hits.hits.map(x => x._source);
+            const data = (this.jr.result.esResult === undefined) ? [] : this.jr.result.esResult.hits.hits.map(x => x);
             if (this.jr.queryStatus == 'JOB_FINISHED' || this.jr.queryStatus == 'CANCELLED' || this.jr.queryStatus == 'JOB_FAILED') {
                 this.state = readableStates.CLOSING;
                 this.push(data);
